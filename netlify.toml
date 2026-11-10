@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build"
+  publish = "dist/loja-lukas-3d/browser"

@@ -1,0 +1,144 @@
+<header class="header">
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="Lukas 3D, início">
+      <span class="logo-mark">L<span>3</span></span>
+      <span>LUKAS<small>IMPRESSÃO CRIATIVA</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#como-funciona">Como comprar</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="nav-cta" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer">✦ Fale conosco</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow"><span class="dot"></span> FEITO COM IMPRESSÃO 3D</span>
+        <h1>Ideias que ganham <em>forma.</em></h1>
+        <p>Presentes, decorações e peças especiais, criadas com carinho para transformar cada ocasião em algo único.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalogo">Explorar catálogo <span>↗</span></a>
+          <a class="btn btn-outline" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer">Pedir pelo WhatsApp</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>Peças reais</strong><small>Fotos dos nossos modelos</small></div>
+          <div><strong>Por encomenda</strong><small>Atendimento personalizado</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="produtos/produto-04.webp" alt="Presépio e árvore de Natal impressos em 3D">
+        <span class="hero-sticker">Feito com<br>carinho ♥</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits" aria-label="Vantagens da Lukas 3D">
+    <div class="wrap benefits-grid">
+      <div><span class="benefit-icon">✦</span><span>Modelos exclusivos<small>Peças para presentear e decorar</small></span></div>
+      <div><span class="benefit-icon">♡</span><span>Atendimento direto<small>Converse com quem produz</small></span></div>
+      <div><span class="benefit-icon">↗</span><span>Encomenda simples<small>Escolha e peça no WhatsApp</small></span></div>
+    </div>
+  </section>
+
+  <section class="catalog wrap" id="catalogo">
+    <div class="section-head">
+      <div>
+        <span class="kicker">NOSSA COLEÇÃO</span>
+        <h2>Encontre sua próxima <em>peça favorita.</em></h2>
+        <p>Escolha um modelo e fale conosco para consultar valores e disponibilidade.</p>
+      </div>
+      <span class="count">{{ filteredProducts().length }} modelos</span>
+    </div>
+
+    <div class="catalog-tools">
+      <div class="tabs" aria-label="Filtrar por categoria">
+        @for (category of categories; track category) {
+          <button type="button" [class.active]="selectedCategory() === category" (click)="selectedCategory.set(category)">
+            {{ category }}
+          </button>
+        }
+      </div>
+      <label class="search">
+        <span aria-hidden="true">⌕</span>
+        <input
+          type="search"
+          placeholder="Buscar um modelo..."
+          aria-label="Buscar produto"
+          [ngModel]="search()"
+          (ngModelChange)="search.set($event)">
+      </label>
+    </div>
+
+    <div class="product-grid">
+      @for (product of filteredProducts(); track product.id) {
+        <article class="product-card">
+          <button class="product-image" type="button" [attr.aria-label]="'Ver detalhes de ' + product.name" (click)="openProduct(product)">
+            <img [src]="product.image" [alt]="product.name" loading="lazy">
+            <span class="zoom">↗</span>
+          </button>
+          <div class="product-info">
+            <span class="product-cat">{{ product.category }}</span>
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <div class="product-bottom">
+              <strong>{{ productPrice(product) }}</strong>
+              <a class="buy" [href]="whatsappUrl(product)" target="_blank" rel="noopener noreferrer">Tenho interesse ↗</a>
+            </div>
+          </div>
+        </article>
+      } @empty {
+        <p class="empty">Nenhum modelo encontrado. Tente outro termo ou categoria.</p>
+      }
+    </div>
+  </section>
+
+  <section class="how" id="como-funciona">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="kicker">SIMPLES ASSIM</span><h2>Como fazer seu <em>pedido</em></h2></div>
+      </div>
+      <div class="steps">
+        <article><span>01</span><h3>Escolha seu modelo</h3><p>Navegue pelas fotos e encontre a peça que você gostou.</p></article>
+        <article><span>02</span><h3>Clique em “Tenho interesse”</h3><p>O WhatsApp abrirá com o nome do produto escolhido.</p></article>
+        <article><span>03</span><h3>Combine sua encomenda</h3><p>Converse sobre preço, cores, prazo e entrega.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="sobre">
+    <div class="wrap cta-box">
+      <div><span class="kicker">TEM UMA IDEIA ESPECIAL?</span><h2>Vamos transformar sua ideia em realidade.</h2><p>Fale com a Lukas 3D e consulte as possibilidades de personalização.</p></div>
+      <a class="btn btn-light" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer">Conversar no WhatsApp ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="logo" href="#inicio"><span class="logo-mark">L<span>3</span></span><span>LUKAS<small>Impressão criativa • Feito com carinho</small></span></a>
+    <span>© {{ currentYear }} Lukas 3D · Fotos reais dos modelos apresentados.</span>
+  </div>
+</footer>
+
+<a class="floating-wa" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">☏</a>
+
+@if (selectedProduct(); as product) {
+  <div class="modal-overlay" role="presentation" (click)="closeProduct()">
+    <section class="modal" role="dialog" aria-modal="true" [attr.aria-label]="product.name" (click)="$event.stopPropagation()">
+      <button class="modal-close" type="button" aria-label="Fechar" (click)="closeProduct()">×</button>
+      <img [src]="product.image" [alt]="product.name">
+      <div class="modal-body">
+        <span class="product-cat">{{ product.category }}</span>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <strong>{{ productPrice(product) }}</strong>
+        <a class="btn btn-primary" [href]="whatsappUrl(product)" target="_blank" rel="noopener noreferrer">Pedir este modelo no WhatsApp ↗</a>
+        <small>Preço, cores, disponibilidade e entrega são combinados diretamente.</small>
+      </div>
+    </section>
+  </div>
+}
