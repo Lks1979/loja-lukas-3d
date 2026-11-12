@@ -81,11 +81,11 @@ export class AppComponent {
     },
     {
       id: 7,
-      name: 'Anjo com vela LED',
+      name: 'Anjo Gabriel com vela LED',
       category: 'Religiosos',
       description: 'Estátua de anjo sobre base decorativa com vela LED.',
       image: 'produtos/produto-07.webp',
-      price: 25.00,
+      price: 45.00,
       featured: true,
     },
     {
