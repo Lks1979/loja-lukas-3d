@@ -118,7 +118,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Oratório decorativo azul e branco com a medalha de São Bento.',
       image: 'produtos/Oratório Azul de São Bento.png',
-      price: 30.00,
+      price: 35.00,
     },
     {
       id: 12,
