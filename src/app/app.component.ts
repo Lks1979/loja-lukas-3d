@@ -178,7 +178,7 @@ export class AppComponent {
 
   whatsappUrl(product?: Product): string {
     const message = product
-      ? `Olá! Vi o produto "${product.name}" no catálogo Lukas 3D e gostaria de saber o preço e como encomendar.`
+      ? `Olá! Tenho interesse no produto "${product.name}" do catálogo Lukas 3D e gostaria de fazer uma encomenda.`
       : 'Olá! Vi o catálogo Lukas 3D e gostaria de fazer uma encomenda.';
 
     return `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(message)}`;
