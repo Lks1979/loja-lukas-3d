@@ -128,6 +128,22 @@ export class AppComponent {
       image: 'produtos/Porta-vela natalino em espiral verde luminoso.png',
       price: 15.00,
     },
+    {
+      id: 13,
+      name: 'Homem-Aranha',
+      category: 'Personagens',
+      description: 'Figura do Homem-Aranha impressa em 3D.',
+      image: 'produtos/image_a6775e57.jpg',
+      price: 50.00,
+    },
+    {
+      id: 14,
+      name: 'Batman',
+      category: 'Personagens',
+      description: 'Figura do Batman impressa em 3D.',
+      image: 'produtos/image_f84aa4a6.jpg',
+      price: 45.00,
+    },
   ];
 
   readonly filteredProducts = computed(() => {
