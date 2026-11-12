@@ -144,6 +144,14 @@ export class AppComponent {
       image: 'produtos/image_f84aa4a6.jpg',
       price: 45.00,
     },
+    {
+      id: 15,
+      name: 'Devocional com Medalha de São Bento',
+      category: 'Religiosos',
+      description: 'Bandeja decorativa com medalhão de São Bento e vela LED.',
+      image: 'produtos/Bandeja Devocional com Medalhão e Vela.png',
+      price: 35.00,
+    },
   ];
 
   readonly filteredProducts = computed(() => {
