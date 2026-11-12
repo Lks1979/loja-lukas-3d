@@ -34,7 +34,7 @@ export class AppComponent {
       category: 'Natal',
       description: 'Cena natalina em árvore decorativa, acompanhada de espaço para vela LED.',
       image: 'produtos/produto-01.webp',
-      price: null,
+      price: 40.00,
       featured: true,
     },
     {
@@ -43,7 +43,7 @@ export class AppComponent {
       category: 'Natal',
       description: 'Conjunto decorativo de presépio com base e vela LED.',
       image: 'produtos/produto-02.webp',
-      price: null,
+      price: 30.00,
     },
     {
       id: 3,
@@ -51,7 +51,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Composição decorativa com Sagrada Família e luminária em espiral.',
       image: 'produtos/produto-03.webp',
-      price: null,
+      price: 35,
       featured: true,
     },
     {
@@ -60,7 +60,7 @@ export class AppComponent {
       category: 'Natal',
       description: 'Presépio, árvore verde e vela LED sobre base vermelha.',
       image: 'produtos/produto-04.webp',
-      price: null,
+      price: 40.00,
       featured: true,
     },
     {
@@ -69,7 +69,7 @@ export class AppComponent {
       category: 'Natal',
       description: 'Presépio compacto com vela LED e base vermelha.',
       image: 'produtos/produto-05.webp',
-      price: null,
+      price: 30.00,
     },
     {
       id: 6,
@@ -77,7 +77,7 @@ export class AppComponent {
       category: 'Personagens',
       description: 'Figura decorativa verde com braços cruzados.',
       image: 'produtos/produto-06.webp',
-      price: null,
+      price: 25.00,
     },
     {
       id: 7,
@@ -85,7 +85,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Estátua de anjo sobre base decorativa com vela LED.',
       image: 'produtos/produto-07.webp',
-      price: null,
+      price: 25.00,
       featured: true,
     },
     {
@@ -94,7 +94,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Imagem de São Francisco de Assis com animais e vela LED em bandeja azul.',
       image: 'produtos/Altar Azul de São Francisco.png',
-      price: null,
+      price: 30.00,
     },
     {
       id: 9,
@@ -102,7 +102,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Imagem de São Bento com vela LED em bandeja decorativa com oração.',
       image: 'produtos/Devocional São Bento com Vela LED.png',
-      price: null,
+      price: 30.00,
     },
     {
       id: 10,
@@ -110,7 +110,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Imagem de Nossa Senhora do Rosário com vela LED em bandeja vermelha.',
       image: 'produtos/Nossa Senhora do Rosário na Bandeja Vermelha.png',
-      price: null,
+      price: 30.00,
     },
     {
       id: 11,
@@ -118,7 +118,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Oratório decorativo azul e branco com a medalha de São Bento.',
       image: 'produtos/Oratório Azul de São Bento.png',
-      price: null,
+      price: 30.00,
     },
     {
       id: 12,
@@ -126,7 +126,7 @@ export class AppComponent {
       category: 'Natal',
       description: 'Porta-vela decorativo em espiral verde inspirado em uma árvore de Natal.',
       image: 'produtos/Porta-vela natalino em espiral verde luminoso.png',
-      price: null,
+      price: 15.00,
     },
   ];
 
@@ -148,8 +148,8 @@ export class AppComponent {
 
   productPrice(product: Product): string {
     return product.price === null
-      ? 'Preço sob consulta'
-      : new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price);
+      ? 'Valor: R$ ______'
+      : `Valor: ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(product.price)}`;
   }
 
   whatsappUrl(product?: Product): string {
