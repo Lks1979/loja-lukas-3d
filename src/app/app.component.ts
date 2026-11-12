@@ -88,6 +88,46 @@ export class AppComponent {
       price: null,
       featured: true,
     },
+    {
+      id: 8,
+      name: 'Altar Azul de São Francisco',
+      category: 'Religiosos',
+      description: 'Imagem de São Francisco de Assis com animais e vela LED em bandeja azul.',
+      image: 'produtos/Altar Azul de São Francisco.png',
+      price: null,
+    },
+    {
+      id: 9,
+      name: 'Devocional São Bento com Vela LED',
+      category: 'Religiosos',
+      description: 'Imagem de São Bento com vela LED em bandeja decorativa com oração.',
+      image: 'produtos/Devocional São Bento com Vela LED.png',
+      price: null,
+    },
+    {
+      id: 10,
+      name: 'Nossa Senhora do Rosário na Bandeja Vermelha',
+      category: 'Religiosos',
+      description: 'Imagem de Nossa Senhora do Rosário com vela LED em bandeja vermelha.',
+      image: 'produtos/Nossa Senhora do Rosário na Bandeja Vermelha.png',
+      price: null,
+    },
+    {
+      id: 11,
+      name: 'Oratório Azul de São Bento',
+      category: 'Religiosos',
+      description: 'Oratório decorativo azul e branco com a medalha de São Bento.',
+      image: 'produtos/Oratório Azul de São Bento.png',
+      price: null,
+    },
+    {
+      id: 12,
+      name: 'Porta-vela natalino em espiral verde',
+      category: 'Natal',
+      description: 'Porta-vela decorativo em espiral verde inspirado em uma árvore de Natal.',
+      image: 'produtos/Porta-vela natalino em espiral verde luminoso.png',
+      price: null,
+    },
   ];
 
   readonly filteredProducts = computed(() => {
