@@ -22,7 +22,7 @@ interface Product {
 export class AppComponent {
   readonly phoneNumber = '5511965781078';
   readonly currentYear = new Date().getFullYear();
-  readonly categories = ['Todos', 'Natal', 'Religiosos', 'Personagens'];
+  readonly categories = ['Todos', 'Natal', 'Religiosos', 'Personagens', 'Acessórios', 'Decoração'];
   readonly search = signal('');
   readonly selectedCategory = signal('Todos');
   readonly selectedProduct = signal<Product | null>(null);
@@ -120,14 +120,14 @@ export class AppComponent {
       image: 'produtos/Oratório Azul de São Bento.png',
       price: 35.00,
     },
-    {
+     {
       id: 12,
-      name: 'Porta-vela natalino em espiral verde',
-      category: 'Natal',
-      description: 'Porta-vela decorativo em espiral verde inspirado em uma árvore de Natal.',
-      image: 'produtos/Porta-vela natalino em espiral verde luminoso.png',
+      name: 'Porta-vela espiral com vela de led',
+      category: 'Decoração',
+      description: 'Porta-vela decorativo em espiral com vela de led.',
+      image: 'produtos/Porta-vela espiral com vela de led.png',
       price: 15.00,
-    },
+    },   
     {
       id: 13,
       name: 'Homem-Aranha',
@@ -152,6 +152,47 @@ export class AppComponent {
       image: 'produtos/Bandeja Devocional com Medalhão e Vela.png',
       price: 35.00,
     },
+    {
+      id: 16,
+      name: 'Chaveiro Anjo azul com argola dourada',
+      category: 'Religiosos',
+      description: 'Anjo decorativo azul com argola dourada para pendurar.',
+      image: 'produtos/Anjo azul com argola dourada.png',
+      price: 10.00,
+    },
+    {
+      id: 17,
+      name: 'Chaveiro Coração Vermelho 3D',
+      category: 'Acessórios',
+      description: 'Chaveiro em formato de coração vermelho impresso em 3D.',
+      image: 'produtos/Chaveiro Coração Vermelho 3D.png',
+      price: 10.00,
+    },
+    {
+      id: 18,
+      name: 'Chaveiro Cruz Branca com JESUS',
+      category: 'Acessórios',
+      description: 'Chaveiro de cruz branca com a inscrição JESUS.',
+      image: 'produtos/Chaveiro Cruz Branca com JESUS.png',
+      price: 10.00,
+    },
+    {
+      id: 19,
+      name: 'Chaveiro de Cruz “Foi por Você!”',
+      category: 'Acessórios',
+      description: 'Chaveiro de cruz com a mensagem “Foi por Você!”.',
+      image: 'produtos/Chaveiros de Cruz “Foi por Você!”.png',
+      price: 10.00,
+    },
+    {
+      id: 20,
+      name: 'Medalha de São Bento em Caixa de presente',
+      category: 'Religiosos',
+      description: 'Medalha de São Bento apresentada em uma caixa de madeira.',
+      image: 'produtos/Medalha de São Bento em Caixa de Madeira.png',
+      price: 20.00,
+    },
+   
   ];
 
   readonly filteredProducts = computed(() => {
