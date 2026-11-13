@@ -68,7 +68,7 @@ export class AppComponent {
       name: 'Mini presépio com vela LED',
       category: 'Natal',
       description: 'Presépio compacto com vela LED e base vermelha.',
-      image: 'produtos/produto-05.webp',
+      image: 'produtos/produto-05.png',
       price: 30.00,
     },
     {
@@ -76,7 +76,7 @@ export class AppComponent {
       name: 'Personagem verde decorativo',
       category: 'Personagens',
       description: 'Figura decorativa verde com braços cruzados.',
-      image: 'produtos/produto-06.webp',
+      image: 'produtos/produto-06.jpg',
       price: 25.00,
     },
     {
@@ -84,7 +84,7 @@ export class AppComponent {
       name: 'Anjo Gabriel com vela LED',
       category: 'Religiosos',
       description: 'Estátua de anjo sobre base decorativa com vela LED.',
-      image: 'produtos/produto-07.webp',
+      image: 'produtos/produto-07.png',
       price: 45.00,
       featured: true,
     },
@@ -125,7 +125,7 @@ export class AppComponent {
       name: 'Porta-vela espiral com vela de led',
       category: 'Decoração',
       description: 'Porta-vela decorativo em espiral com vela de led.',
-      image: 'produtos/Porta-vela espiral com vela de led.webp',
+      image: 'produtos/Porta-vela espiral com luz acolhedora.png',
       price: 15.00,
     },   
     {
@@ -157,7 +157,7 @@ export class AppComponent {
       name: 'Chaveiro Anjo azul com argola dourada',
       category: 'Religiosos',
       description: 'Anjo decorativo azul com argola dourada para pendurar.',
-      image: 'produtos/Anjo azul com argola dourada.webp',
+      image: 'produtos/Anjo azul com argola dourada.png',
       price: 10.00,
     },
     {
@@ -165,7 +165,7 @@ export class AppComponent {
       name: 'Chaveiro Coração Vermelho 3D',
       category: 'Acessórios',
       description: 'Chaveiro em formato de coração vermelho impresso em 3D.',
-      image: 'produtos/Chaveiro Coração Vermelho 3D.webp',
+      image: 'produtos/Chaveiro Coração Vermelho 3D.png',
       price: 10.00,
     },
     {
@@ -173,7 +173,7 @@ export class AppComponent {
       name: 'Chaveiro Cruz Branca com JESUS',
       category: 'Acessórios',
       description: 'Chaveiro de cruz branca com a inscrição JESUS.',
-      image: 'produtos/Chaveiro Cruz Branca com JESUS.webp',
+      image: 'produtos/Chaveiro Cruz Branca com JESUS.png',
       price: 10.00,
     },
     {
@@ -181,7 +181,7 @@ export class AppComponent {
       name: 'Chaveiro de Cruz “Foi por Você!”',
       category: 'Acessórios',
       description: 'Chaveiro de cruz com a mensagem “Foi por Você!”.',
-      image: 'produtos/Chaveiros de Cruz Foi por Você.webp',
+      image: 'produtos/Chaveiros de Cruz Foi por Você.png',
       price: 10.00,
     },
     {
@@ -189,7 +189,7 @@ export class AppComponent {
       name: 'Medalha de São Bento em Caixa de presente',
       category: 'Religiosos',
       description: 'Medalha de São Bento apresentada em uma caixa de madeira.',
-      image: 'produtos/Medalha de São Bento em Caixa de Madeira.webp',
+      image: 'produtos/Medalha de São Bento em Caixa de Madeira.png',
       price: 20.00,
     },
    
