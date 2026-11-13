@@ -125,7 +125,7 @@ export class AppComponent {
       name: 'Porta-vela espiral com vela de led',
       category: 'Decoração',
       description: 'Porta-vela decorativo em espiral com vela de led.',
-      image: 'produtos/Porta-vela espiral com vela de led.png',
+      image: 'produtos/Porta-vela espiral com vela de led.webp',
       price: 15.00,
     },   
     {
@@ -157,7 +157,7 @@ export class AppComponent {
       name: 'Chaveiro Anjo azul com argola dourada',
       category: 'Religiosos',
       description: 'Anjo decorativo azul com argola dourada para pendurar.',
-      image: 'produtos/Anjo azul com argola dourada.png',
+      image: 'produtos/Anjo azul com argola dourada.webp',
       price: 10.00,
     },
     {
@@ -165,7 +165,7 @@ export class AppComponent {
       name: 'Chaveiro Coração Vermelho 3D',
       category: 'Acessórios',
       description: 'Chaveiro em formato de coração vermelho impresso em 3D.',
-      image: 'produtos/Chaveiro Coração Vermelho 3D.png',
+      image: 'produtos/Chaveiro Coração Vermelho 3D.webp',
       price: 10.00,
     },
     {
@@ -173,7 +173,7 @@ export class AppComponent {
       name: 'Chaveiro Cruz Branca com JESUS',
       category: 'Acessórios',
       description: 'Chaveiro de cruz branca com a inscrição JESUS.',
-      image: 'produtos/Chaveiro Cruz Branca com JESUS.png',
+      image: 'produtos/Chaveiro Cruz Branca com JESUS.webp',
       price: 10.00,
     },
     {
@@ -181,7 +181,7 @@ export class AppComponent {
       name: 'Chaveiro de Cruz “Foi por Você!”',
       category: 'Acessórios',
       description: 'Chaveiro de cruz com a mensagem “Foi por Você!”.',
-      image: 'produtos/Chaveiros de Cruz “Foi por Você!”.png',
+      image: 'produtos/Chaveiros de Cruz Foi por Você.webp',
       price: 10.00,
     },
     {
@@ -189,7 +189,7 @@ export class AppComponent {
       name: 'Medalha de São Bento em Caixa de presente',
       category: 'Religiosos',
       description: 'Medalha de São Bento apresentada em uma caixa de madeira.',
-      image: 'produtos/Medalha de São Bento em Caixa de Madeira.png',
+      image: 'produtos/Medalha de São Bento em Caixa de Madeira.webp',
       price: 20.00,
     },
    
