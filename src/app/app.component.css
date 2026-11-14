@@ -94,8 +94,8 @@
 .christmas-hero{background:linear-gradient(120deg,#f4f0e8,#f7eee2)}
 .christmas-hero .eyebrow{color:#9e684c}
 .christmas-hero .dot{background:#a33f35}
-.christmas-hero .hero-visual{border-radius:24px;background:#e8ddce}
-.christmas-hero .christmas-hero-image{object-fit:contain}
+.christmas-hero .hero-visual{height:auto;aspect-ratio:3/2;border-radius:24px;background:#a65a25}
+.christmas-hero .christmas-hero-image{object-fit:cover;object-position:center}
 .christmas-hero .hero-sticker{width:auto;height:auto;padding:12px 17px;border-radius:100px;transform:rotate(0);font-weight:700;box-shadow:0 5px 20px #0002}
 
 @media(max-width:650px){
