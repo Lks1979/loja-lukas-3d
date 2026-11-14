@@ -192,7 +192,14 @@ export class AppComponent {
       image: 'produtos/Medalha de São Bento em Caixa de Madeira.png',
       price: 20.00,
     },
-   
+    {
+      id: 21,
+      name: 'Presépio Elegante com Velas Douradas',
+      category: 'Natal',
+      description: 'Presépio da Sagrada Família em bandeja com duas velas LED douradas.',
+      image: 'produtos/Presépio Elegante com Velas Douradas.png',
+      price: 55.00,
+    },
   ];
 
   readonly filteredProducts = computed(() => {

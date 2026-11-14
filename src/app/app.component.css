@@ -89,6 +89,19 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
 
+.christmas-banner{display:flex;justify-content:center;align-items:center;gap:12px;padding:11px 20px;background:#29473c;color:#fff;font-size:12px;text-align:center}
+.christmas-banner span:first-child{color:#f0c783;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+.christmas-hero{background:linear-gradient(120deg,#f4f0e8,#f7eee2)}
+.christmas-hero .eyebrow{color:#9e684c}
+.christmas-hero .dot{background:#a33f35}
+.christmas-hero .hero-visual{border-radius:24px;background:#e8ddce}
+.christmas-hero .christmas-hero-image{object-fit:contain}
+.christmas-hero .hero-sticker{width:auto;height:auto;padding:12px 17px;border-radius:100px;transform:rotate(0);font-weight:700;box-shadow:0 5px 20px #0002}
+
+@media(max-width:650px){
+  .christmas-banner{flex-direction:column;gap:4px;padding:10px 16px;font-size:11px}
+}
+
 .whatsapp-link{display:inline-flex;align-items:center;gap:8px}
 .whatsapp-icon{width:18px;height:18px;flex:none;fill:currentColor}
 .floating-wa .whatsapp-icon{width:30px;height:30px}
