@@ -118,7 +118,7 @@ export class AppComponent {
       category: 'Religiosos',
       description: 'Oratório decorativo azul e branco com a medalha de São Bento.',
       image: 'produtos/Oratório Azul de São Bento.png',
-      price: 35.00,
+      price: 30.00,
     },
      {
       id: 12,
@@ -182,7 +182,7 @@ export class AppComponent {
       category: 'Acessórios',
       description: 'Chaveiro de cruz com a mensagem “Foi por Você!”.',
       image: 'produtos/Chaveiros de Cruz Foi por Você.png',
-      price: 10.00,
+      price: 5.00,
     },
     {
       id: 20,
@@ -199,6 +199,14 @@ export class AppComponent {
       description: 'Presépio da Sagrada Família em bandeja com duas velas LED douradas.',
       image: 'produtos/Presépio Elegante com Velas Douradas.png',
       price: 55.00,
+    },
+    {
+      id: 22,
+      name: 'Presépio Natalino com Árvore Dourada',
+      category: 'Natal',
+      description: 'Presépio da Sagrada Família com árvore de Natal dourada e vela LED.',
+      image: 'produtos/Presépio Natalino com Árvore Dourada.png',
+      price: 40.00,
     },
   ];
 
@@ -226,7 +234,7 @@ export class AppComponent {
 
   whatsappUrl(product?: Product): string {
     const message = product
-      ? `Olá! Tenho interesse no produto "${product.name}" do catálogo Lukas 3D e gostaria de fazer uma encomenda.`
+      ? `Olá! Tenho interesse no produto "${product.name}" do catálogo Lukas 3D e gostaria de fazer uma encomenda.\nFoto do produto: ${typeof document === 'undefined' ? product.image : new URL(product.image, document.baseURI).href}`
       : 'Olá! Vi o catálogo Lukas 3D e gostaria de fazer uma encomenda.';
 
     return `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(message)}`;
