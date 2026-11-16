@@ -26,6 +26,7 @@ export class AppComponent {
   readonly search = signal('');
   readonly selectedCategory = signal('Todos');
   readonly selectedProduct = signal<Product | null>(null);
+  readonly feedback = signal('');
 
   readonly products: Product[] = [
     {
@@ -238,6 +239,18 @@ export class AppComponent {
       : 'Olá! Vi o catálogo Lukas 3D e gostaria de fazer uma encomenda.';
 
     return `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(message)}`;
+  }
+
+  sendFeedback(): void {
+    const feedback = this.feedback().trim();
+    if (!feedback) {
+      return;
+    }
+
+    const message = `Olá! Quero enviar uma crítica ou sugestão para a Lukas 3D:\n\n${feedback}`;
+    const url = `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+    this.feedback.set('');
   }
 
   openProduct(product: Product): void {
