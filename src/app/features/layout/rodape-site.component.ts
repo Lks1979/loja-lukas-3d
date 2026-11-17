@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-site-footer',
+  selector: 'app-rodape-site',
   standalone: true,
-  templateUrl: './site-footer.component.html',
+  templateUrl: './rodape-site.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SiteFooterComponent {
+export class RodapeSiteComponente {
   readonly currentYear = new Date().getFullYear();
 }

@@ -1,16 +1,16 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { WhatsappService } from '../../core/services/whatsapp.service';
-import { WhatsappIconComponent } from '../../shared/whatsapp-icon/whatsapp-icon.component';
+import { IconeWhatsAppComponente } from '../../shared/icone-whatsapp/icone-whatsapp.component';
 
 @Component({
-  selector: 'app-feedback-section',
+  selector: 'app-secao-sugestoes',
   standalone: true,
-  imports: [FormsModule, WhatsappIconComponent],
-  templateUrl: './feedback-section.component.html',
+  imports: [FormsModule, IconeWhatsAppComponente],
+  templateUrl: './secao-sugestoes.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeedbackSectionComponent {
+export class SecaoSugestoesComponente {
   readonly feedback = signal('');
 
   constructor(private readonly whatsapp: WhatsappService) {}

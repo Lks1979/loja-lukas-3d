@@ -1,17 +1,17 @@
 import { ChangeDetectionStrategy, Component, HostListener, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Product, PRODUCTS } from '../../core/models/product';
-import { ProductCardComponent } from './product-card.component';
-import { ProductModalComponent } from './product-modal.component';
+import { CartaoProdutoComponente } from './cartao-produto.component';
+import { ModalProdutoComponente } from './modal-produto.component';
 
 @Component({
-  selector: 'app-product-catalog',
+  selector: 'app-catalogo-produtos',
   standalone: true,
-  imports: [FormsModule, ProductCardComponent, ProductModalComponent],
-  templateUrl: './product-catalog.component.html',
+  imports: [FormsModule, CartaoProdutoComponente, ModalProdutoComponente],
+  templateUrl: './catalogo-produtos.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductCatalogComponent {
+export class CatalogoProdutosComponente {
   readonly categories = ['Todos', 'Natal', 'Religiosos', 'Personagens', 'Acessórios', 'Decoração'];
   readonly search = signal('');
   readonly selectedCategory = signal('Todos');

@@ -1,18 +1,18 @@
 import { ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
 import { formatProductPrice, Product } from '../../core/models/product';
 import { WhatsappService } from '../../core/services/whatsapp.service';
-import { WhatsappIconComponent } from '../../shared/whatsapp-icon/whatsapp-icon.component';
+import { IconeWhatsAppComponente } from '../../shared/icone-whatsapp/icone-whatsapp.component';
 
 @Component({
-  selector: 'app-product-card',
+  selector: 'app-modal-produto',
   standalone: true,
-  imports: [WhatsappIconComponent],
-  templateUrl: './product-card.component.html',
+  imports: [IconeWhatsAppComponente],
+  templateUrl: './modal-produto.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductCardComponent {
+export class ModalProdutoComponente {
   readonly product = input.required<Product>();
-  readonly selected = output<Product>();
+  readonly closed = output<void>();
   readonly price = computed(() => formatProductPrice(this.product()));
   readonly whatsappUrl = computed(() => this.whatsapp.catalogUrl(this.product()));
 

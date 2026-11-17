@@ -29,7 +29,7 @@
 
   <div class="product-grid">
     @for (product of filteredProducts(); track product.id) {
-      <app-product-card [product]="product" (selected)="openProduct($event)" />
+      <app-cartao-produto [product]="product" (selected)="openProduct($event)" />
     } @empty {
       <p class="empty">Nenhum modelo encontrado. Tente outro termo ou categoria.</p>
     }
@@ -37,5 +37,5 @@
 </section>
 
 @if (selectedProduct(); as product) {
-  <app-product-modal [product]="product" (closed)="closeProduct()" />
+  <app-modal-produto [product]="product" (closed)="closeProduct()" />
 }

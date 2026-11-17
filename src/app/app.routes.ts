@@ -5,7 +5,7 @@ export const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadComponent: () =>
-      import('./pages/home/home-page.component').then((module) => module.HomePageComponent),
+      import('./pages/home/pagina-inicial.component').then((module) => module.PaginaInicialComponente),
   },
   {
     path: '**',

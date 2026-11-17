@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { WhatsappService } from '../../core/services/whatsapp.service';
-import { WhatsappIconComponent } from '../../shared/whatsapp-icon/whatsapp-icon.component';
+import { IconeWhatsAppComponente } from '../../shared/icone-whatsapp/icone-whatsapp.component';
 
 @Component({
-  selector: 'app-site-header',
+  selector: 'app-secao-destaque',
   standalone: true,
-  imports: [WhatsappIconComponent],
-  templateUrl: './site-header.component.html',
+  imports: [IconeWhatsAppComponente],
+  templateUrl: './secao-destaque.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SiteHeaderComponent {
+export class SecaoDestaqueComponente {
   constructor(private readonly whatsapp: WhatsappService) {}
 
   whatsappUrl(): string {

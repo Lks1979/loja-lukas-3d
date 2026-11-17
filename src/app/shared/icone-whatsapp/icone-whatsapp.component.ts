@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-whatsapp-icon',
+  selector: 'app-icone-whatsapp',
   standalone: true,
   template: `
     <svg class="whatsapp-icon" aria-hidden="true" viewBox="0 0 24 24">
@@ -10,4 +10,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class WhatsappIconComponent {}
+export class IconeWhatsAppComponente {}

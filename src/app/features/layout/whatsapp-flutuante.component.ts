@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { WhatsappService } from '../../core/services/whatsapp.service';
-import { WhatsappIconComponent } from '../../shared/whatsapp-icon/whatsapp-icon.component';
+import { IconeWhatsAppComponente } from '../../shared/icone-whatsapp/icone-whatsapp.component';
 
 @Component({
-  selector: 'app-contact-section',
+  selector: 'app-whatsapp-flutuante',
   standalone: true,
-  imports: [WhatsappIconComponent],
-  templateUrl: './contact-section.component.html',
+  imports: [IconeWhatsAppComponente],
+  templateUrl: './whatsapp-flutuante.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactSectionComponent {
+export class WhatsappFlutuanteComponente {
   constructor(private readonly whatsapp: WhatsappService) {}
 
   whatsappUrl(): string {

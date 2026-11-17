@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-benefits-section',
+  selector: 'app-como-funciona',
   standalone: true,
-  templateUrl: './benefits-section.component.html',
+  templateUrl: './como-funciona.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BenefitsSectionComponent {}
+export class ComoFuncionaComponente {}
