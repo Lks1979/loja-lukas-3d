@@ -7,7 +7,7 @@ export class WhatsappService {
 
   catalogUrl(product?: Product): string {
     const message = product
-      ? `Olá! Tenho interesse no produto "${product.name}" do catálogo Lukas 3D e gostaria de fazer uma encomenda.\nFoto do produto: ${typeof document === 'undefined' ? product.image : new URL(product.image, document.baseURI).href}`
+      ? `Olá! Tenho interesse no produto "${product.name}" do catálogo Lukas 3D e gostaria de fazer uma encomenda.\nLink para ver a foto do produto: ${typeof document === 'undefined' ? product.image : new URL(product.image, document.baseURI).href}`
       : 'Olá! Vi o catálogo Lukas 3D e gostaria de fazer uma encomenda.';
 
     return this.createUrl(message);
