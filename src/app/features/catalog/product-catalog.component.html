@@ -1,0 +1,41 @@
+<section class="catalog wrap" id="catalogo">
+  <div class="section-head">
+    <div>
+      <span class="kicker">NOSSA COLEÇÃO</span>
+      <h2>Encontre sua próxima <em>peça favorita.</em></h2>
+      <p>Confira o valor de cada peça e fale conosco para fazer seu pedido.</p>
+    </div>
+    <span class="count">{{ filteredProducts().length }} modelos</span>
+  </div>
+
+  <div class="catalog-tools">
+    <div class="tabs" aria-label="Filtrar por categoria">
+      @for (category of categories; track category) {
+        <button type="button" [class.active]="selectedCategory() === category" (click)="selectedCategory.set(category)">
+          {{ category }}
+        </button>
+      }
+    </div>
+    <label class="search">
+      <span aria-hidden="true">⌕</span>
+      <input
+        type="search"
+        placeholder="Buscar um modelo..."
+        aria-label="Buscar produto"
+        [ngModel]="search()"
+        (ngModelChange)="search.set($event)">
+    </label>
+  </div>
+
+  <div class="product-grid">
+    @for (product of filteredProducts(); track product.id) {
+      <app-product-card [product]="product" (selected)="openProduct($event)" />
+    } @empty {
+      <p class="empty">Nenhum modelo encontrado. Tente outro termo ou categoria.</p>
+    }
+  </div>
+</section>
+
+@if (selectedProduct(); as product) {
+  <app-product-modal [product]="product" (closed)="closeProduct()" />
+}

@@ -1,0 +1,17 @@
+<div class="modal-overlay" role="presentation" (click)="closed.emit()">
+  <section class="modal" role="dialog" aria-modal="true" [attr.aria-label]="product().name" (click)="$event.stopPropagation()">
+    <button class="modal-close" type="button" aria-label="Fechar" (click)="closed.emit()">×</button>
+    <img [src]="product().image" [alt]="product().name">
+    <div class="modal-body">
+      <span class="product-cat">{{ product().category }}</span>
+      <h2>{{ product().name }}</h2>
+      <p>{{ product().description }}</p>
+      <strong>{{ price() }}</strong>
+      <a class="btn btn-primary whatsapp-link" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer">
+        <app-whatsapp-icon />
+        Pedir este modelo no WhatsApp ↗
+      </a>
+      <small>Consulte cores, disponibilidade e entrega pelo WhatsApp.</small>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,18 @@
+<article class="product-card">
+  <button class="product-image" type="button" [attr.aria-label]="'Ver detalhes de ' + product().name" (click)="selected.emit(product())">
+    <img [src]="product().image" [alt]="product().name" loading="lazy">
+    <span class="zoom">↗</span>
+  </button>
+  <div class="product-info">
+    <span class="product-cat">{{ product().category }}</span>
+    <h3>{{ product().name }}</h3>
+    <p>{{ product().description }}</p>
+    <div class="product-bottom">
+      <strong>{{ price() }}</strong>
+      <a class="buy whatsapp-link" [href]="whatsappUrl()" target="_blank" rel="noopener noreferrer">
+        <app-whatsapp-icon />
+        Tenho interesse ↗
+      </a>
+    </div>
+  </div>
+</article>

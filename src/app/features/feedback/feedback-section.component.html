@@ -1,0 +1,29 @@
+<section class="feedback-section" id="sugestoes">
+  <div class="wrap feedback-layout">
+    <div class="feedback-intro">
+      <span class="kicker">SUA OPINIÃO É IMPORTANTE</span>
+      <h2>Críticas e sugestões</h2>
+      <p>Conte para nós como podemos melhorar. Sua mensagem será preparada para envio direto pelo WhatsApp.</p>
+    </div>
+    <form class="feedback-form" (ngSubmit)="sendFeedback()">
+      <label for="feedback-message">Escreva sua mensagem</label>
+      <textarea
+        id="feedback-message"
+        name="feedback"
+        rows="5"
+        maxlength="1000"
+        required
+        placeholder="Deixe sua crítica ou sugestão aqui..."
+        [ngModel]="feedback()"
+        (ngModelChange)="feedback.set($event)"></textarea>
+      <div class="feedback-form-footer">
+        <small>O WhatsApp abrirá com a mensagem pronta para você enviar.</small>
+        <button class="btn btn-primary whatsapp-link" type="submit" [disabled]="!feedback().trim()">
+          <app-whatsapp-icon />
+          Enviar pelo WhatsApp
+        </button>
+        <a class="btn btn-outline" href="#inicio" aria-label="Voltar ao topo da página">↑ Voltar ao topo</a>
+      </div>
+    </form>
+  </div>
+</section>
