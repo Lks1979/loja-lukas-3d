@@ -189,6 +189,14 @@ export const PRODUCTS: Product[] = [
     image: 'produtos/Presépio Natalino com Árvore Dourada.png',
     price: 40.00,
   },
+  {
+    id: 23,
+    name: 'Porta-vela LED da Sagrada Família',
+    category: 'Religiosos',
+    description: 'Porta-vela decorativo da Sagrada Família com vela LED.',
+    image: 'produtos/Porta-vela led da Sagrada Família.png',
+    price: 15.00,
+  },
 ];
 
 export function formatProductPrice(product: Product): string {
