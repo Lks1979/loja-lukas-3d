@@ -197,6 +197,14 @@ export const PRODUCTS: Product[] = [
     image: 'produtos/Porta-vela led da Sagrada Família.png',
     price: 15.00,
   },
+  {
+    id: 24,
+    name: 'Cruz com Raio Azul',
+    category: 'Religiosos',
+    description: 'Escultura de cruz preta com halo iluminado em azul.',
+    image: 'produtos/Cruz Negra com Halo Azul.png',
+    price: 30.00,
+  },
 ];
 
 export function formatProductPrice(product: Product): string {
