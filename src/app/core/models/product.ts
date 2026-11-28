@@ -141,13 +141,13 @@ export const PRODUCTS: Product[] = [
     image: 'produtos/Anjo azul com argola dourada.png',
     price: 10.00,
   },
-  {
+   {
     id: 17,
-    name: 'Chaveiro Coração Vermelho 3D',
+    name: 'Suporte de óculos de parede',
     category: 'Acessórios',
-    description: 'Chaveiro em formato de coração vermelho impresso em 3D.',
-    image: 'produtos/Chaveiro Coração Vermelho 3D.png',
-    price: 10.00,
+    description: 'Suporte de parede para óculos, disponível em várias cores.',
+    image: 'produtos/Suporte de Óculos de parede.png',
+    price: 2.00,
   },
   {
     id: 18,
@@ -205,6 +205,15 @@ export const PRODUCTS: Product[] = [
     image: 'produtos/Cruz Negra com Halo Azul.png',
     price: 30.00,
   },
+  {
+    id: 25,
+    name: 'Suporte de celular de parede',
+    category: 'Acessórios',
+    description: 'Suporte de parede para celular, disponível em várias cores.',
+    image: 'produtos/Suporte de celular de Parede.png',
+    price: 11.00,
+  },
+
 ];
 
 export function formatProductPrice(product: Product): string {
